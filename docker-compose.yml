@@ -1,0 +1,47 @@
+services:
+  server:
+    build: ./server
+    container_name: cwr-server
+    restart: always
+    env_file: ./server/.env
+    volumes:
+      - ./server/uploads:/app/uploads
+      - ./server/database.sqlite:/app/database.sqlite
+    networks:
+      - cwr-network
+
+  client:
+    build: 
+      context: ./client
+      args:
+        - VITE_API_URL=
+    container_name: cwr-client
+    restart: always
+    networks:
+      - cwr-network
+
+  gateway:
+    image: nginx:stable-alpine
+    container_name: cwr-gateway
+    restart: always
+    ports:
+      - "8081:80"
+    depends_on:
+      - client
+      - server
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - cwr-network
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: cwr-tunnel
+    restart: always
+    command: tunnel --no-autoupdate run --token eyJhIjoiZmJiOTVjMzQ3NmJiZmE3NDJiZjc5MWJiOWM5ZjY1ZWEiLCJ0IjoiODEzYzQ0ZGEtNDgzNi00NWQ4LTk5YzItN2JkY2I0ZmNhMGY3IiwicyI6Ik5tTTVabUZpTURZdE56TXdPUzAwTldZMUxXRXdPREF0TVRKa1pETTBZek5sTkdKaiJ9
+    networks:
+      - cwr-network
+
+networks:
+  cwr-network:
+    driver: bridge
