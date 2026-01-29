@@ -21,7 +21,7 @@ export default function SplashPage() {
         <p className="text-lg md:text-xl text-gray-500 font-medium mb-10 max-w-2xl leading-tight animate-fade-in-up delay-200">
           Sick of sending emails that go nowhere? 🙄
           <span className="block mt-4">
-            We all know the effort that goes into reporting only for it to fall on deaf ears. Our platform makes reporting effortless—creating the visibility and solid evidence base needed to drive the accountability and change for a better Hither Green.
+            We built this little tool to make reporting effortless. By pooling our reports, we create a clear picture of the problems in our area—giving us the evidence to hold authorities to account and help make Hither Green safer, together.
           </span>
         </p>
 
