@@ -124,15 +124,16 @@ export default function ReportForm() {
 
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
-      <div className="max-w-2xl mx-auto px-6 py-8">
-        
-        {/* Header */}
-        <div className="flex items-center gap-4 mb-8">
-            <Link to="/" className="p-2 -ml-2 hover:bg-gray-100 rounded-full transition-colors">
+      <nav className="border-b border-gray-100 relative bg-white z-40 px-6 py-4">
+        <div className="max-w-2xl mx-auto flex items-center gap-4">
+            <Link to="/" className="p-2 -ml-2 hover:bg-gray-100 rounded-full transition-colors text-gray-500 hover:text-black">
                 <ChevronLeft className="h-6 w-6" />
             </Link>
-            <h1 className="text-3xl font-black tracking-tight">New Report</h1>
+            <h1 className="text-xl font-black tracking-tight uppercase">New Report</h1>
         </div>
+      </nav>
+
+      <div className="max-w-2xl mx-auto px-6 py-8">
           
         <form onSubmit={handleSubmit} className="space-y-8">
             

@@ -237,13 +237,13 @@ export default function ReportDetailPage() {
                             <div key={idx} className="group relative bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
                                 {file.match(/\.(mp4|mov|webm)$/i) ? (
                                     <video 
-                                        src={`${apiUrl}/uploads/${file}`} 
+                                        src={`/uploads/${file}`} 
                                         controls 
                                         className="w-full aspect-video object-cover"
                                     />
                                 ) : (
                                     <img 
-                                        src={`${apiUrl}/uploads/${file}`} 
+                                        src={`/uploads/${file}`} 
                                         alt="Evidence" 
                                         className="w-full h-auto"
                                     />
@@ -251,10 +251,10 @@ export default function ReportDetailPage() {
                                 <div className="p-4 flex justify-between items-center bg-white border-t border-gray-100">
                                     <span className="text-[10px] font-mono text-gray-400 truncate max-w-[150px]">{file}</span>
                                     <div className="flex gap-2">
-                                        <a href={`${apiUrl}/uploads/${file}`} target="_blank" download className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                                        <a href={`/uploads/${file}`} target="_blank" download className="p-2 hover:bg-gray-100 rounded-full transition-colors">
                                             <Download className="h-4 w-4 text-gray-500" />
                                         </a>
-                                        <a href={`${apiUrl}/uploads/${file}`} target="_blank" className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                                        <a href={`/uploads/${file}`} target="_blank" className="p-2 hover:bg-gray-100 rounded-full transition-colors">
                                             <ExternalLink className="h-4 w-4 text-gray-500" />
                                         </a>
                                     </div>

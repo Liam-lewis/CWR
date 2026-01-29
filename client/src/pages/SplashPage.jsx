@@ -13,15 +13,15 @@ export default function SplashPage() {
             <span>Built for Hither Green</span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 leading-[1.1] animate-fade-in-up delay-100">
-          Neighbors looking out <br className="hidden md:block" /> 
-          for <span className="text-gray-400">neighbors.</span>
+        <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-[1.1] animate-fade-in-up delay-100">
+          Anonymously report issues <br className="hidden md:block" /> 
+          <span className="text-gray-400">— effortlessly.</span>
         </h1>
 
         <p className="text-lg md:text-xl text-gray-500 font-medium mb-10 max-w-2xl leading-tight animate-fade-in-up delay-200">
           Sick of sending emails that go nowhere? 🙄
           <span className="block mt-4">
-            We built this little tool to make reporting effortless. By pooling our reports, we create a clear picture of the problems in our area and help make Hither Green safer, together.
+            We all know the effort that goes into reporting only for it to fall on deaf ears. Our platform makes reporting effortless—creating the visibility and solid evidence base needed to drive the accountability and change for a better Hither Green.
           </span>
         </p>
 
